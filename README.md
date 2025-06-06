@@ -1,6 +1,9 @@
+＃𝗠𝗼𝗻𝗶𝘁𝗼𝗿𝗶𝗻𝗴 - 𝗗𝗮𝘀𝗵𝗯𝗼𝗮𝗿𝗱
+
 This Monitoring Dashboard show all the functionality of the whole company.
 
 𝗠𝗮𝗶𝗻 𝗗𝗮𝘀𝗵𝗯𝗼𝗮𝗿𝗱
+
 	1) Live Production Monitoring, Monthly Plan Vs Actual Production Monitoring in Tabular and Graphical Representation
  	2) Monthly incident Record and Report in Tabular and Graphical Representation
   	3) Live/Current Model Running in Company /Plant
