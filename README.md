@@ -1,9 +1,9 @@
-# Monitoring-Dashboard
-This Monitoring Dashboard show all the functionality of the whole company 
+This Monitoring Dashboard show all the functionality of the whole company.
+
 𝗠𝗮𝗶𝗻 𝗗𝗮𝘀𝗵𝗯𝗼𝗮𝗿𝗱
 	1) Live Production Monitoring, Monthly Plan Vs Actual Production Monitoring in Tabular and Graphical Representation
-	2) Monthly incident Record and Report in Tabular and Graphical Representation
-	3) Live/Current Model Running in Company /Plant
+ 	2) Monthly incident Record and Report in Tabular and Graphical Representation
+  	3) Live/Current Model Running in Company /Plant
 	4) OEE Factors like...
 		a) Machine Availability (%)
 		b) Machine Performance (%)
