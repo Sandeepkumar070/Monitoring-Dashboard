@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Production";
+}
+
+<form style="border: 2px solid #800080; padding: 20px; border-radius: 10px; min-width: 800px; max-width: 900px; display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; background-color: #f9f9f9;">
+
+    <!-- Styled Form Header -->
+    <div style="width: 100%; margin-bottom: 20px;">
+        <div style="background-color: #708090; color: white; padding: 12px; border-radius: 8px; text-align: center;">
+            <h2 style="margin: 0; font-size: 24px;">Production Planning</h2>
+        </div>
+    </div>
+
+    <!-- Left Column -->
+    <div style="flex: 1;">
+        <!-- ComboBoxes -->
+        <div style="margin-bottom: 15px;">
+            <label for="combo1" style="display: block; margin-bottom: 5px;">Select Line :</label>
+            <select id="combo1" name="combo1" style="width: 100%; height: 35px; border-radius: 8px;">
+                <option value="">--Select--</option>
+                <option value="Main Assy">Main Assy</option>
+                <option value="Sub Assy">Sub Assy</option>
+                <option value="Motor Assy">Motor Assy</option>
+            </select>
+        </div>
+
+        <!-- Textboxes -->
+        <div style="margin-bottom: 15px;">
+            <label for="textbox1" style="display: block; margin-bottom: 5px;">VIN Number:</label>
+            <input type="text" id="textbox1" name="textbox1" style="width: 100%; height: 35px; border-radius: 8px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="textbox2" style="display: block; margin-bottom: 5px;">Production Plan:</label>
+            <input type="text" id="textbox2" name="textbox2" style="width: 100%; height: 35px; border-radius: 8px;">
+        </div>
+    </div>
+
+    <!-- Right Column -->
+    <div style="flex: 1;">
+        <!-- More Textboxes -->
+        <div style="margin-bottom: 15px;">
+            <label for="textbox3" style="display: block; margin-bottom: 5px;">Model Number:</label>
+            <input type="text" id="textbox3" name="textbox3" style="width: 100%; height: 35px; border-radius: 8px;">
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="textbox4" style="display: block; margin-bottom: 5px;">Text Box 4:</label>
+            <input type="text" id="textbox4" name="textbox4" style="width: 100%; height: 35px; border-radius: 8px;">
+        </div>
+
+        <!-- Date Time Pickers -->
+        <div style="display: flex; justify-content: center; gap: 40px; padding: 0 20px; margin-bottom: 15px;">
+            <div style="width: 175px; margin-left: -20px;">
+                <label for="datetime1" style="display: block; margin-bottom: 5px;">Start Date & Time:</label>
+                <input type="datetime-local" id="datetime1" name="datetime1"
+                       style="width: 100%; height: 35px; font-size: 12px; border-radius: 8px;">
+            </div>
+            <div style="width: 175px;">
+                <label for="datetime2" style="display: block; margin-bottom: 5px;">End Date & Time:</label>
+                <input type="datetime-local" id="datetime2" name="datetime2"
+                       style="width: 100%; height: 35px; font-size: 12px; border-radius: 8px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div style="width: 100%; margin-top: 20px; text-align: right;">
+        <button type="submit" style="width: 420px; padding: 10px 20px; font-size: 16px; border-radius: 8px; background-color: #708090; color: white; border: none;">
+            Plan
+        </button>
+    </div>
+
+
+
+</form>
+

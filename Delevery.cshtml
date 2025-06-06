@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Cost";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<form id="myForm" onsubmit="return handleSubmit()" style="border: 1px solid #ccc; padding: 20px; max-width: 400px;border-radius:10px;">
+
+    <!-- Helper style for icon and label container -->
+    <style>
+        .icon-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .icon-box {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+    </style>
+
+    <div class="icon-label"style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #007bff;"><i class="fas fa-receipt"></i></span>
+        Delivery Number
+    </div>
+    <input type="text" name="delivery_number" placeholder="Delivery Number" style="width: 100%; margin-bottom: 10px;border-radius:5px;" required>
+
+    <div class="icon-label" style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #28a745;"><i class="fas fa-truck"></i></span>
+        Vehicle Number
+    </div>
+    <input type="text" name="vehicle_number" style="width: 100%; margin-bottom: 10px;" required>
+
+    <div class="icon-label" style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #ffc107;"><i class="fas fa-cubes"></i></span>
+        Material Type/Number
+    </div>
+    <input type="text" name="material_type" style="width: 100%; margin-bottom: 10px;" required>
+
+    <div class="icon-label" style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #17a2b8;"><i class="fas fa-box-open"></i></span>
+        Quality Delivered
+    </div>
+    <input type="text" name="quality_delivered" style="width: 100%; margin-bottom: 10px;" required>
+
+    <div class="icon-label" style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #6f42c1;"><i class="fas fa-check-circle"></i></span>
+        Inspection Result
+    </div>
+    <input type="text" name="inspection_result" style="width: 100%; margin-bottom: 10px;" required>
+
+    <div class="icon-label" style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #fd7e14;"><i class="fas fa-calendar-alt"></i></span>
+        Date & Time
+    </div>
+    <input type="datetime-local" name="inspection_datetime" style="width: 100%; margin-bottom: 10px;" required>
+
+    <div class="icon-label" style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #20c997;"><i class="fas fa-comment-dots"></i></span>
+        Remarks
+    </div>
+    <textarea name="remarks" rows="2" style="width: 100%; margin-bottom: 10px;"></textarea>
+
+    <div class="icon-label" style="font-family:'Times New Roman', Times, serif;color:dimgray;">
+        <span class="icon-box" style="background-color: #dc3545;"><i class="fas fa-paperclip"></i></span>
+        Attach File
+    </div>
+    <input type="file" name="attachment" style="margin-bottom: 20px;">
+
+    <br>
+    <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; cursor: pointer;">Submit</button>
+</form>
+
+<script>
+    function handleSubmit() {
+      alert("Form submitted successfully!");
+      return false; // prevent actual submission for demonstration
+    }
+</script>

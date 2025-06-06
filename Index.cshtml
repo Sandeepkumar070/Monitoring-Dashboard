@@ -1,0 +1,695 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+
+    <!-- Production Cards Row -->
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; padding-top: 5px;margin-left:220px;min-width:1700px;">
+
+        <!-- Total Till Production - Blue -->
+        <div style="background: #cce5ff; border-radius: 15px; width: 315px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.15);">
+            <h5 style="margin: 0 0 15px 0; color: #004085; text-align: left; font-family:'Times New Roman', Times, serif;">Total Till Production</h5>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <!-- Colorful Bike Icon -->
+                <svg style="width: 50px; height: 50px; filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.3));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007bff">
+                    <path d="M5.5 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 5.5 14zm13 2a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 18.5 14zM13.25 5h-2v2h1.75l1.5 4H9.5l-.6-1.6a1 1 0 0 0-.93-.64H6v2h1.19l1.6 4.27a1 1 0 0 0 .93.63h6v-2h-5.31l-.33-.9H15a1 1 0 0 0 .95-1.31l-2-5.34A1 1 0 0 0 13.25 5z" />
+                </svg>
+                <span style="font-size: 28px; font-weight: bold; color: #004085;">12,345</span>
+            </div>
+        </div>
+
+
+        <div style="background: #d4edda; border-radius: 15px; width: 315px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);">
+            <h5 style="margin: 0 0 15px 0; color: #218838; text-align: left; font-family:'Times New Roman', Times, serif;">Total Till OK Production</h5>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <!-- OK bike icon with checkmark (left side) -->
+                <svg style="width: 50px; height: 50px; filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g fill="#28a745">
+                        <!-- Bike -->
+                        <path d="M5.5 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 5.5 14zm13 2a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 18.5 14zM13.25 5h-2v2h1.75l1.5 4H9.5l-.6-1.6a1 1 0 0 0-.93-.64H6v2h1.19l1.6 4.27a1 1 0 0 0 .93.63h6v-2h-5.31l-.33-.9H15a1 1 0 0 0 .95-1.31l-2-5.34A1 1 0 0 0 13.25 5z" />
+                        <!-- Checkmark -->
+                        <path d="M16.5 2l-5 5-2-2-1.4 1.4 3.4 3.4 6.4-6.4z" fill="#218838" />
+                    </g>
+                </svg>
+
+                <!-- Total count on right -->
+                <span style="font-size: 28px; font-weight: bold; color: #218838;">11,234</span>
+            </div>
+        </div>
+
+        <!-- Total Till NG Production - Red with Bike and Cross Icon -->
+        <div style="background: #f8d7da; border-radius: 15px; width: 315px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);">
+            <h5 style="margin: 0 0 15px 0; color: #c82333; text-align: left; font-family:'Times New Roman', Times, serif;">Total Till NG Production</h5>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <!-- Bike with Cross Icon -->
+                <svg style="width: 50px; height: 50px; filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g fill="#c82333">
+                        <!-- Bike -->
+                        <path d="M5.5 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 5.5 14zm13 2a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 18.5 14zM13.25 5h-2v2h1.75l1.5 4H9.5l-.6-1.6a1 1 0 0 0-.93-.64H6v2h1.19l1.6 4.27a1 1 0 0 0 .93.63h6v-2h-5.31l-.33-.9H15a1 1 0 0 0 .95-1.31l-2-5.34A1 1 0 0 0 13.25 5z" />
+                        <!-- Cross (X) mark -->
+                        <path d="M17.5 3.5l-1-1L14 5l-2.5-2.5-1 1L13 6l-2.5 2.5 1 1L14 7l2.5 2.5 1-1L15 6l2.5-2.5z" fill="#c82333" />
+                    </g>
+                </svg>
+
+                <!-- NG Production Number -->
+                <span style="font-size: 28px; font-weight: bold; color: #c82333;">1,111</span>
+            </div>
+        </div>
+
+        <!-- Total Till NG Production - Red with Bike and Cross Icon -->
+        <div style="background: #ede7f6; border-radius: 15px; width: 315px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);">
+            <h5 style="margin: 0 0 15px 0; color: #4a148c; text-align: left; font-family: 'Times New Roman', Times, serif;">
+                Total Safety Incidents Reported
+            </h5>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <!-- Person Walking Icon -->
+                <svg style="width: 50px; height: 50px; filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2));" xmlns="http://www.w3.org/2000/svg" fill="#4a148c" viewBox="0 0 24 24">
+                    <path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6.5 7V23h-1V12.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5v1h-1v-.69a6.02 6.02 0 0 1-3.51-2.52c-.31.87-.49 1.78-.49 2.71 0 .23.02.46.03.69L15 16.5V23h-2v-5l-1.78-2.54L11 19l-3 4-1.6-1.2L9 18.33V13c0-1.12.27-2.18.74-3.12.58-.13 1.19-.2 1.8-.2 1.48 0 2.85.43 4.01 1.17l1-1.6c-.72-.5-1.53-.88-2.41-1.09V9.6c1.29.3 2.25 1.42 2.25 2.75v.65l-.01.03c-.83.28-1.4 1.03-1.4 1.87v1.5h3.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z" />
+                </svg>
+
+                <!-- Incident Count -->
+                <span style="font-size: 28px; font-weight: bold; color: #4a148c;">80</span>
+            </div>
+        </div>
+
+
+
+        <div style="background: #fff3cd; border-radius: 15px; width: 315px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);">
+            <h5 style="margin: 0 0 15px 0; color: #856404; text-align: left; font-family: 'Times New Roman', Times, serif;">
+                Power Consumption
+            </h5>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <!-- Electricity Consumption Icon -->
+                <svg style="width: 50px; height: 50px; filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path fill="#856404" d="M11 13h2v3h5l-1.6 1.2L16 18.4V20h-5v-3H8l3.6-4.8L11 13zm11-3c0 5.523-4.477 10-10 10S2 15.523 2 10 6.477 0 12 0s10 4.477 10 10zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-9-5h2v4h3v2h-2.657l2.223 3.334-1.789 1.192L12 13.618V15h-2v-4H7V9h2.657L7.434 5.666 9.223 4.474 11 8.382V5z" />
+                </svg>
+
+                <!-- Consumption Number -->
+                <span style="font-size: 28px; font-weight: bold; color: #856404;">75 Kwh</span>
+            </div>
+        </div>
+        
+    </div>
+
+    <div style="display: flex; justify-content: space-between; width: 100%; min-width: 1650px; margin: 0px auto;margin-left:-70px;">
+
+        <!-- LEFT BOX -->
+        <div style="width: 990px; height: 350px; border: 1px solid #ccc; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: Arial, sans-serif; background: #fff; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="font-size: 24px; margin: 0; color: #333; display: flex; align-items: center; gap: 12px; font-family:'Times New Roman', Times, serif;">
+                    <svg width="32" height="32" viewBox="0 0 64 64" fill="none" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                        <rect x="8" y="32" width="8" height="24" fill="#FF6B6B" rx="2" ry="2" />
+                        <rect x="24" y="20" width="8" height="36" fill="#FFD93D" rx="2" ry="2" />
+                        <rect x="40" y="12" width="8" height="44" fill="#6BCB77" rx="2" ry="2" />
+                        <rect x="56" y="28" width="8" height="28" fill="#4D96FF" rx="2" ry="2" />
+                    </svg>
+                    Plan vs Actual Monthly
+                </h2>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 12px; height: 12px; background-color: #4D96FF; border-radius: 3px;"></span>
+                        <span style="font-size: 14px;">Plan</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 12px; height: 12px; background-color: #FF6B6B; border-radius: 50%;"></span>
+                        <span style="font-size: 14px;">Actual</span>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="planActualChart" style="flex-grow: 1;min-height:150px;"></canvas>
+        </div>
+
+     
+        <!-- RIGHT BOX with Safety Pie Chart -->
+        <div style="width: 315px; height: 350px; border: 1px solid #ccc; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: Arial, sans-serif; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <h2 style="font-size: 16px; margin: 0 0 12px 0; color: #333; text-align: left; display: flex; align-items: center; gap: 12px; font-family:'Times New Roman', Times, serif; width: 100%;">
+                <!-- Fall Incident Icon SVG -->
+                <svg width="28" height="28" viewBox="0 0 640 512" fill="none" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                    <path d="M320 96a64 64 0 1 0 0-128 64 64 0 1 0 0 128zm144 288-55.8-167.5c-7.5-22.4-24.9-40.1-47.4-47.3l-116-36.3c-9.2-2.9-19-1.2-26.8 4.5L96.1 224.6c-11.7 8.3-14.3 24.4-6 36s24.4 14.3 36 6L232 192.5l40.5 12.7-80.5 80v144H104c-13.3 0-24 10.7-24 24s10.7 24 24 24H304c13.3 0 24-10.7 24-24v-157.5l71.7 22.5L320 464c-5.6 11.2-1 24.9 10.2 30.5s24.9 1 30.5-10.2l96-192c4.1-8.1 4.7-17.6 1.3-26z" fill="#FF6B6B" />
+                </svg>
+                Incident Breakdown (Monthly)
+            </h2>
+
+
+
+
+            <!-- Larger Circular Chart -->
+            <svg width="280" height="280" viewBox="0 0 280 280" style="transform: rotate(-90deg); position: relative;">
+                <circle cx="140" cy="140" r="100" stroke="#eee" stroke-width="14" fill="none" />
+                <g id="chartGroup"></g>
+            </svg>
+
+            <!-- Legend -->
+            <div style="margin-top: 10px; font-size: 13px; width: 100%; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <div style="display: flex; align-items: center;">
+                    <span style="width:10px;height:10px;border-radius:50%;background:#FF6B6B;display:inline-block;margin-right:6px;"></span>Major
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="width:10px;height:10px;border-radius:50%;background:#FFD93D;display:inline-block;margin-right:6px;"></span>Minor
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="width:10px;height:10px;border-radius:50%;background:#6BCB77;display:inline-block;margin-right:6px;"></span>First Aid
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <span style="width:10px;height:10px;border-radius:50%;background:#4D96FF;display:inline-block;margin-right:6px;"></span>Other
+                </div>
+            </div>
+
+
+            <!-- JS Logic for incident -->
+            <script>
+                (function () {
+                    const data = {
+                        major: { percent: 25, color: "#FF6B6B" },
+                        minor: { percent: 35, color: "#FFD93D" },
+                        firstAid: { percent: 25, color: "#6BCB77" },
+                        other: { percent: 15, color: "#4D96FF" },
+                    };
+
+                    const radius = 100;
+                    const center = 140;
+                    const circumference = 2 * Math.PI * radius;
+                    let accumulatedPercent = 0;
+                    const chartGroup = document.getElementById("chartGroup");
+
+                    Object.entries(data).forEach(([key, { percent, color }]) => {
+                        const arc = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                        arc.setAttribute("cx", center);
+                        arc.setAttribute("cy", center);
+                        arc.setAttribute("r", radius);
+                        arc.setAttribute("fill", "none");
+                        arc.setAttribute("stroke", color);
+                        arc.setAttribute("stroke-width", "14");
+                        arc.setAttribute("stroke-dasharray", `0 ${circumference}`);
+                        arc.setAttribute("stroke-dashoffset", `-${(accumulatedPercent / 100) * circumference}`);
+                        arc.style.transition = "stroke-dasharray 1s ease";
+                        chartGroup.appendChild(arc);
+
+                        setTimeout(() => {
+                            const dash = (percent / 100) * circumference;
+                            arc.setAttribute("stroke-dasharray", `${dash} ${circumference - dash}`);
+                        }, 100);
+
+                        // Label
+                        const midPercent = accumulatedPercent + percent / 2;
+                        const angle = (midPercent / 100) * 360;
+                        const radians = (angle * Math.PI) / 180;
+                        const labelRadius = radius + 25;
+                        const labelX = center + labelRadius * Math.cos(radians);
+                        const labelY = center + labelRadius * Math.sin(radians);
+
+                        const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                        text.setAttribute("x", labelX);
+                        text.setAttribute("y", labelY);
+                        text.setAttribute("fill", color);
+                        text.setAttribute("font-size", "16");
+                        text.setAttribute("font-weight", "bold");
+                        text.setAttribute("text-anchor", "middle");
+                        text.setAttribute("dominant-baseline", "middle");
+                        text.setAttribute("transform", `rotate(90, ${labelX}, ${labelY})`);
+                        text.textContent = percent + "%";
+                        chartGroup.appendChild(text);
+
+                        accumulatedPercent += percent;
+                    });
+                })();
+            </script>
+        </div>
+
+        <div style="width: 315px; height: 350px; border: 1px solid #ccc; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: Arial, sans-serif; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <!-- Left: Icon + Heading -->
+                <h2 style="font-size: 16px; margin: 0; color: #333; display: flex; align-items: center; gap: 12px; font-family:'Times New Roman', Times, serif;">
+                    <svg width="32" height="32" viewBox="0 0 64 64" fill="none" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                        <rect x="8" y="32" width="8" height="24" fill="#FF6B6B" rx="2" ry="2" />
+                        <rect x="24" y="20" width="8" height="36" fill="#FFD93D" rx="2" ry="2" />
+                        <rect x="40" y="12" width="8" height="44" fill="#6BCB77" rx="2" ry="2" />
+                        <rect x="56" y="28" width="8" height="28" fill="#4D96FF" rx="2" ry="2" />
+                    </svg>
+                    Line Status
+                </h2>
+
+                <!-- Right: Dynamic Date-Time -->
+                <span id="datetime" style="font-size: 12px; color: #555; font-family: Arial, sans-serif;"></span>
+            </div>
+
+
+            <!-- Table -->
+            <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px;">
+                <thead>
+                    <tr style="background-color: #f4f4f4;">
+                        <th style="border: 1px solid #ccc; padding: 6px;">Line</th>
+                        <th style="border: 1px solid #ccc; padding: 6px;">Plan</th>
+                        <th style="border: 1px solid #ccc; padding: 6px;">VIN No.</th>
+                        <th style="border: 1px solid #ccc; padding: 6px;">Model No.</th>
+                        <th style="border: 1px solid #ccc; padding: 6px;">Color Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 6px;">Main Assy</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">1200</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">VIN101545852</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">T-02</td>
+                        <td style="border: 1px solid #ccc; padding: 6px; background-color: #D0312D; text-align: center;">
+                            <svg style="width: 50px; height: 50px; filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g fill="Red">
+                                    <!-- Bike -->
+                                    <path d="M5.5 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 5.5 14zm13 2a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 18.5 14zM13.25 5h-2v2h1.75l1.5 4H9.5l-.6-1.6a1 1 0 0 0-.93-.64H6v2h1.19l1.6 4.27a1 1 0 0 0 .93.63h6v-2h-5.31l-.33-.9H15a1 1 0 0 0 .95-1.31l-2-5.34A1 1 0 0 0 13.25 5z" />
+                                   
+                                </g>
+                            </svg>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 6px;">SUB Assy</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">1000</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">VIN101545853</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">T-01</td>
+                        <td style="border: 1px solid #ccc; padding: 6px; background-color: green;">
+                            <svg style="width: 50px; height: 50px; filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g fill="Greenyellow">
+                                    <!-- Bike -->
+                                    <path d="M5.5 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 5.5 14zm13 2a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 18.5 14zM13.25 5h-2v2h1.75l1.5 4H9.5l-.6-1.6a1 1 0 0 0-.93-.64H6v2h1.19l1.6 4.27a1 1 0 0 0 .93.63h6v-2h-5.31l-.33-.9H15a1 1 0 0 0 .95-1.31l-2-5.34A1 1 0 0 0 13.25 5z" />
+
+                                </g>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 6px;">Moter Assy</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">1500</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">VIN101545858</td>
+                        <td style="border: 1px solid #ccc; padding: 6px;">T-03</td>
+                        <td style="border: 1px solid #ccc; padding: 6px; background-color: blue;">
+                            <svg style="width: 50px; height: 50px; filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.2));" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g fill="lightblue">
+                                    <!-- Bike -->
+                                    <path d="M5.5 16a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 5.5 14zm13 2a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 .001-3.001A1.5 1.5 0 0 0 18.5 14zM13.25 5h-2v2h1.75l1.5 4H9.5l-.6-1.6a1 1 0 0 0-.93-.64H6v2h1.19l1.6 4.27a1 1 0 0 0 .93.63h6v-2h-5.31l-.33-.9H15a1 1 0 0 0 .95-1.31l-2-5.34A1 1 0 0 0 13.25 5z" />
+
+                                </g>
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div style="display: flex; justify-content: space-between; gap: 10px; width: 1650px; margin: 0px auto;margin-left:-70px;">
+
+        <!-- Left Panel: OEE Factors -->
+        <div style="width: 690px; height: 240px; border: 1px solid #ccc; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: #fff;font-family: Arial, sans-serif;">
+            <h2 style="font-size: 20px; margin: 16px 0 8px;">
+                <span style="font-size: 24px; margin-right: 8px; color: #3f51b5; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); vertical-align: middle;">🛰️</span>
+                OEE Factors
+            </h2>
+
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Product Availability -->
+                <div style="width: 22%; text-align: center;">
+                    <div id="chart1"></div>
+                    <div style="margin-top: 8px;">
+                        <span style="font-size: 16px; color: #ff6f00;">📦</span>
+                        <span style="font-size: 14px; margin-left: 6px; color: #ff6f00;">Availability</span>
+                    </div>
+                </div>
+
+                <!-- Performance -->
+                <div style="width: 22%; text-align: center;">
+                    <div id="chart2"></div>
+                    <div style="margin-top: 8px;">
+                        <span style="font-size: 16px; color: #03a9f4;">⏱️</span>
+                        <span style="font-size: 14px; margin-left: 6px; color: #03a9f4;">Performance</span>
+                    </div>
+                </div>
+
+                <!-- Quality -->
+                <div style="width: 22%; text-align: center;">
+                    <div id="chart3"></div>
+                    <div style="margin-top: 8px;">
+                        <span style="font-size: 16px; color: #4caf50;">✅</span>
+                        <span style="font-size: 14px; margin-left: 6px; color: #4caf50;">Quality</span>
+                    </div>
+                </div>
+
+                <!-- Equipment Efficiency -->
+                <div style="width: 22%; text-align: center;">
+                    <div id="chart4"></div>
+                    <div style="margin-top: 8px;">
+                        <span style="font-size: 16px; color: #ab47bc;">⚙️</span>
+                        <span style="font-size: 14px; margin-left: 6px; color: #ab47bc;">OEE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+        <!-- Right Panel: Power Consumption -->
+    
+        <div style="width: 600px; height: 240px; border: 1px solid #ccc; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: Arial, sans-serif; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <h2 style="font-size: 18px; margin: 0 0 16px 0; color: #333; text-align: left; display: flex; align-items: center; gap: 12px; font-family:'Times New Roman', Times, serif; align-self: flex-start;">
+                <!-- Eco Power Icon -->
+                <svg width="32" height="32" viewBox="0 0 512 512" fill="none" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                    <path fill="#34C759" d="M437.5 74.5c-99.2-99.2-260-99.2-359.2 0-95.6 95.6-99.2 248.5-10.8 349.3 9.4 10.2 25.4 10.7 35.2 1.2l104-103.2c10.6-10.5 11.1-27.5 1.1-38.4-23.2-25.4-21.4-65.2 5.3-91.9s66.5-28.5 91.9-5.3c10.9 10 27.9 9.5 38.4-1.1L436.3 120c9.5-9.8 9-25.8-1.2-35.5zM408.4 103.6l-80.8 81.5c-20.6-10.8-44.6-15.2-67.8-13.3-27.6 2.3-54.2 14.6-74.5 34.8-20.2 20.2-32.5 46.9-34.8 74.5-1.9 23.2 2.5 47.2 13.3 67.8l-81.5 80.8C37.3 351.7 40.5 198.7 143.3 95.9c81.3-81.3 213.2-84.6 300.2-7.7 0 0 2.3 1.8-35.1 15.4z" />
+                </svg>
+                Power Consumption Per Bike
+            </h2>
+
+
+            <div style="display: flex; gap: 80px; justify-content: center; align-items: center;">
+                <!-- kWh -->
+                <div style="position: relative; width: 130px; height: 130px; background: black; border-radius: 50%;">
+                    <canvas id="circle1" width="130" height="130" style="display: block;"></canvas>
+                    <div id="text1" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px; color: cyan; font-weight: bold;">0 kWh</div>
+                </div>
+
+                <!-- Ampere -->
+                <div style="position: relative; width: 130px; height: 130px; background: black; border-radius: 50%;">
+                    <canvas id="circle2" width="130" height="130" style="display: block;"></canvas>
+                    <div id="text2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px; color: cyan; font-weight: bold;">0 A</div>
+                </div>
+
+                <!-- Voltage -->
+                <div style="position: relative; width: 130px; height: 130px; background: black; border-radius: 50%;">
+                    <canvas id="circle3" width="130" height="130" style="display: block;"></canvas>
+                    <div id="text3" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 20px; color: cyan; font-weight: bold;">0 V</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="width: 415px; height: 240px; border: 1px solid #ccc; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: Arial, sans-serif; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <!-- Left: Icon + Heading -->
+                <h2 style="font-size: 16px; margin: 0; color: #333; display: flex; align-items: center; gap: 12px; font-family:'Times New Roman', Times, serif;">
+                    <!-- eSSL Biometric Machine Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4D96FF" stroke-width="1.8" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                        <rect x="2" y="3" width="20" height="18" rx="2" fill="#f0f0f0" stroke="#4D96FF" />
+                        <rect x="4" y="5" width="16" height="12" fill="#fff" stroke="#4D96FF" />
+                        <circle cx="12" cy="11" r="2" fill="#4D96FF" />
+                        <rect x="10" y="14" width="4" height="1" fill="#4D96FF" />
+                        <rect x="10" y="16" width="4" height="1" fill="#4D96FF" />
+                        <rect x="10" y="18" width="4" height="1" fill="#4D96FF" />
+                    </svg>
+                    Today Biometric Status
+                </h2>
+                <!-- Right: Dynamic Date-Time -->
+                <span id="datetime" style="font-size: 12px; color: #555; font-family: Arial, sans-serif;"></span>
+            </div>
+            <!-- Table -->
+
+            <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); animation: fadeIn 1s ease-in-out;">
+                <thead>
+                    <tr style="background-color: #4CAF50; color: white;">
+                        <th style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+                            <i class="fa fa-layer-group" style="margin-right: 6px;"></i>Line
+                        </th>
+                        <th style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+                            <i class="fa fa-chart-bar" style="margin-right: 6px;"></i>Total
+                        </th>
+                        <th style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+                            <i class="fa fa-user-check" style="margin-right: 6px;"></i> Present
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f9f9f9;" onmouseover="this.style.backgroundColor='#ffe082'" onmouseout="this.style.backgroundColor='#f9f9f9'">
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+                            <i class="fa fa-tools" style="color: #2196F3; margin-right: 6px;"></i>Main Assy
+                        </td>
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">100</td>
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">90</td>
+                    </tr>
+                    <tr style="background-color: #e0f7fa;" onmouseover="this.style.backgroundColor='#ffe082'" onmouseout="this.style.backgroundColor='#e0f7fa'">
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+                            <i class="fa fa-cogs" style="color: #9C27B0; margin-right: 6px;"></i>SUB Assy
+                        </td>
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">100</td>
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">95</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;" onmouseover="this.style.backgroundColor='#ffe082'" onmouseout="this.style.backgroundColor='#f9f9f9'">
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+                            <i class="fa fa-bolt" style="color: #FF5722; margin-right: 6px;"></i>Motor Assy
+                        </td>
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">90</td>
+                        <td style="border: 1px solid #ccc; padding: 10px; text-align: center;">87</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+  
+
+
+
+</div>
+<div style="position: fixed; top: 840px; left: 242px; width: 1650px; height: 45px; font-family:'Times New Roman', Times, serif; background-color: white; color: #a33; display: flex; align-items: center; overflow: hidden; padding-left: 10px; font-size: 24px; border-bottom: 1px solid #ccc; z-index: 1000; border-radius: 8px;">
+    <span id="movingText" style="white-space: nowrap; position: relative; left: 0;">🔔 New safety incident reported!</span>
+</div>
+
+@* java scrips start  *@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+    const text = document.getElementById('movingText');
+    let position = 0;
+    let direction = 1;
+
+    function animateText() {
+        position += direction;
+        if (position > 1550 || position < 0) {
+            direction *= -1;
+        }
+        text.style.left = position + 'px';
+        requestAnimationFrame(animateText);
+    }
+
+    animateText();
+</script>
+<script>
+    const ctx = document.getElementById('planActualChart').getContext('2d');
+
+    const daysInMonth = Array.from({ length: 31 }, (_, i) => (i + 1).toString());
+
+    const planData = [10, 15, 12, 14, 20, 18, 20, 30, 40, 10, 40, 10, 15, 12, 14, 20, 18, 20, 30, 40, 10, 40, 10, 15, 12, 14, 20, 18, 20, 30, 40];
+    const actualData = [8, 18, 10, 15, 22, 16, 8, 18, 10, 15, 22, 16, 8, 18, 10, 15, 22, 16, 8, 18, 10, 15, 22, 16, 16, 8, 18, 10, 15, 22, 16];
+
+    while (planData.length < 31) planData.push(0);
+    while (actualData.length < 31) actualData.push(0);
+
+    const planActualChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: daysInMonth,
+        datasets: [
+          {
+            label: 'Plan',
+            data: planData,
+            backgroundColor: '#4D96FF',
+            borderRadius: 4,
+            barPercentage: 0.5,
+          },
+          {
+            label: 'Actual',
+            data: actualData,
+            backgroundColor: '#FF6B6B',
+            borderRadius: 4,
+            barPercentage: 0.5,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: '',
+              font: { size: 14, weight: 'bold' }
+            },
+            ticks: {
+              maxRotation: 0,
+              minRotation: 0,
+              align: 'center',
+              padding: 5,
+              autoSkip: false
+            }
+          },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Value',
+              font: { size: 14, weight: 'bold' }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false // Disable built-in legend
+          },
+          tooltip: {
+            enabled: true,
+            mode: 'index',
+            intersect: false,
+          }
+        }
+      },
+      plugins: [
+        {
+          id: 'customBottomLabel',
+          afterDraw(chart) {
+            const { ctx, chartArea: { bottom, left, width } } = chart;
+            ctx.save();
+            ctx.font = 'bold 14px Arial';
+            ctx.fillStyle = 'gray';
+            ctx.textAlign = 'center';
+            ctx.fillText('Date', left + width / 2, bottom + 50);
+            ctx.restore();
+          }
+        }
+      ]
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+@* OEE Factors *@
+
+<script>
+
+    function createGaugeChart(id, value, color) {
+      var options = {
+        chart: {
+          type: 'radialBar',
+          height: 130,
+        },
+        plotOptions: {
+          radialBar: {
+            hollow: {
+              size: '60%', // Size of the hollow center
+            },
+            track: {
+              show: true,
+              background: '#e7e7e7',
+              strokeWidth: '150px', // Track thickness (background ring)
+            },
+            dataLabels: {
+              name: {
+                show: false
+              },
+              value: {
+                show: true,
+                fontSize: '20px',
+                fontWeight: 600,
+                color: '#333',
+                offsetY: 0, // Vertical center
+                formatter: function(val) {
+                  return val + '%';
+                }
+              }
+            }
+          }
+        },
+        stroke: {
+          lineCap: 'round' // Rounded ends (optional)
+        },
+        colors: [color],
+        series: [value],
+      };
+
+      new ApexCharts(document.querySelector(id), options).render();
+    }
+
+    createGaugeChart("#chart1", 70.58, "#FFA500");
+    createGaugeChart("#chart2", 90.46, "#03a9f4");
+    createGaugeChart("#chart3", 91.85, "#4caf50");
+    createGaugeChart("#chart4", 60.15, "#ab47bc");
+</script>
+
+
+@* Power Factors *@
+
+<script>
+    function drawCircle(canvasId, textId, value, unit, maxValue) {
+        const canvas = document.getElementById(canvasId);
+        const ctx = canvas.getContext('2d');
+        const text = document.getElementById(textId);
+        const radius = 50;  // Increased radius
+        const center = canvas.width / 2;
+        let current = 0;
+
+        function animate() {
+            if (current <= value) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Background arc
+                ctx.beginPath();
+                ctx.arc(center, center, radius, 0, 2 * Math.PI);
+                ctx.strokeStyle = '#222';
+                ctx.lineWidth = 10;
+                ctx.stroke();
+
+                // Foreground arc
+                ctx.beginPath();
+                ctx.arc(center, center, radius, -Math.PI / 2, (current / maxValue) * 2 * Math.PI - Math.PI / 2);
+                ctx.strokeStyle = 'cyan';
+                ctx.lineWidth = 10;
+                ctx.stroke();
+
+                // Outer dots
+                for (let i = 0; i < 100; i++) {
+                    const angle = (i / 100) * 2 * Math.PI;
+                    const x = center + Math.cos(angle) * (radius + 12);
+                    const y = center + Math.sin(angle) * (radius + 12);
+                    ctx.beginPath();
+                    ctx.arc(x, y, 1, 0, 2 * Math.PI);
+                    ctx.fillStyle = i < (current / maxValue) * 100 ? 'cyan' : '#111';
+                    ctx.fill();
+                }
+
+                text.textContent = current + ' ' + unit;
+                current++;
+                requestAnimationFrame(animate);
+            }
+        }
+        animate();
+    }
+
+    drawCircle('circle1', 'text1', 75, 'kW/B', 100);
+    drawCircle('circle2', 'text2', 12, 'A', 30);
+    drawCircle('circle3', 'text3', 48, 'V', 100);
+</script>
+
+
+<script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      };
+      document.getElementById('datetime').textContent = now.toLocaleString('en-US', options);
+    }
+
+    updateDateTime(); // initial call
+    setInterval(updateDateTime, 1000); // update every second
+</script>

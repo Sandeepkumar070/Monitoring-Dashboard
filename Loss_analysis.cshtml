@@ -1,0 +1,516 @@
+﻿@{
+    ViewData["Title"] = "Loss_analysis";
+}
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+<!-- Production Cards Row -->
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; padding-top: 5px; margin-left:210px; min-width:1700px; font-family: 'Times New Roman', Times, serif;">
+
+    <!-- Production -->
+    <div style="background: #e3f2fd; border-radius: 15px; width: 315px; height:130px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.15);">
+        <h5 style="margin-bottom: 15px; color: #1565c0;">Production</h5>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 40px;">🏭</span>
+            <span style="font-size: 28px; font-weight: bold; color: #1565c0;">345 min</span>
+        </div>
+    </div>
+
+    <!-- Maintenance -->
+        <div style="background: #f1f8e9; border-radius: 15px; width: 315px;height:130px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);">
+        <h5 style="margin-bottom: 15px; color: #558b2f;">Maintenance</h5>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 40px;">🛠️</span>
+            <span style="font-size: 28px; font-weight: bold; color: #558b2f;">234 min</span>
+        </div>
+    </div>
+
+    <!-- Process -->
+        <div style="background: #ffebee; border-radius: 15px; width: 315px;height:130px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.1);">
+        <h5 style="margin-bottom: 15px; color: #b71c1c;">Process</h5>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 40px;">⚙️</span>
+            <span style="font-size: 28px; font-weight: bold; color: #b71c1c;">111 min</span>
+        </div>
+    </div>
+
+        <!-- Material -->
+        <div style="background: #f3e5f5; border-radius: 15px; width: 630px; padding: 20px; box-shadow: 4px 4px 12px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+            <h5 style="margin-bottom: 15px; color: #6a1b9a; font-size: 18px;">Search</h5>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+                <!-- Combobox 1 -->
+                <div style="flex: 1 1 45%;">
+                    <label style="font-size: 14px; color: #333;">Line</label><br>
+                    <select style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                        <option value="">Select Line</option>
+                        <option value="Line 1">All Line</option>
+                        <option value="Line 2">Main-Assy</option>
+                        <option value="Line 2">Sub-Assy</option>
+                        <option value="Line 2">Motor-Assy</option>
+                    </select>
+                </div>
+
+                <!-- Combobox 2 -->
+                <div style="flex: 1 1 45%;">
+                    <label style="font-size: 14px; color: #333;">Station</label><br>
+                    <select style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                        <option value="">Select Station</option>
+                        <option value="ST-01">All Station</option>
+                        <option value="ST-01">ST-01</option>
+                        <option value="ST-02">ST-02</option>
+                        <option value="ST-01">ST-03</option>
+                        <option value="ST-02">ST-04</option>
+                        <option value="ST-01">ST-05</option>
+                        <option value="ST-02">ST-06</option>
+                        <option value="ST-01">ST-07</option>
+                        <option value="ST-02">ST-08</option>
+                        <option value="ST-01">ST-09</option>
+                        <option value="ST-02">ST-10</option>
+                    </select>
+                </div>
+
+                <!-- Date Picker 1 -->
+                <div style="flex: 1 1 45%;">
+                    <label style="font-size: 14px; color: #333;">From Date</label><br>
+                    <input type="date" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                </div>
+
+                <!-- Date Picker 2 -->
+                <div style="flex: 1 1 45%;">
+                    <label style="font-size: 14px; color: #333;">To Date</label><br>
+                    <input type="date" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                </div>
+
+                <!-- Button -->
+                <div style="flex: 1 1 100%; text-align: right;">
+                    <button style="padding: 10px 20px; background-color: #6a1b9a; color: white; border: none; border-radius: 6px; font-size: 14px; cursor: pointer;">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+</div>
+
+    <div style="display: flex; gap: 12px; width: 100%; min-width: 1650px; margin: 0px auto; margin-left: -70px;">
+
+        <!-- LEFT BOX -->
+        <div style="width: 990px; height: 350px;margin-top:-140px; border: 1px solid #ccc; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Times New Roman', Times, serif; background: #fff; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="font-size: 24px; margin: 0; color: #333; display: flex; align-items: center; gap: 12px;">
+                    <svg width="32" height="32" viewBox="0 0 64 64" fill="none" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                        <rect x="8" y="32" width="8" height="24" fill="#FF6B6B" rx="2" ry="2" />
+                        <rect x="24" y="20" width="8" height="36" fill="#FFD93D" rx="2" ry="2" />
+                        <rect x="40" y="12" width="8" height="44" fill="#6BCB77" rx="2" ry="2" />
+                        <rect x="56" y="28" width="8" height="28" fill="#4D96FF" rx="2" ry="2" />
+                    </svg>
+                    Monthly Breakdown Time(Mins) 
+                </h2>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 12px; height: 12px; background-color: #4D96FF; border-radius: 3px;"></span>
+                        <span style="font-size: 14px;">Electrical</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 12px; height: 12px; background-color: #FF6B6B; border-radius: 3px;"></span>
+                        <span style="font-size: 14px;">Mechanical</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 12px; height: 12px; background-color: #FFD93D; border-radius: 3px;"></span>
+                        <span style="font-size: 14px;">Hydraulic</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 12px; height: 12px; background-color: #6BCB77; border-radius: 3px;"></span>
+                        <span style="font-size: 14px;">Pneumatic</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <span style="display: inline-block; width: 12px; height: 12px; background-color: #AB47BC; border-radius: 3px;"></span>
+                        <span style="font-size: 14px;">Thermal</span>
+                    </div>
+                </div>
+
+            </div>
+            <canvas id="breakdownChart" style="flex-grow: 1; min-height: 150px;"></canvas>
+        </div>
+
+        <!-- RIGHT BOX with Top 10 Breakdown Table -->
+        <div style="width: 645px; height: 300px; border: 1px solid #ccc; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Times New Roman', Times, serif; background: #fff; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; overflow: hidden;">
+            <h2 style="font-size: 24px; margin: 0 0 12px 0; color: #333; display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 28px; color: #1565c0;">📉</span>
+                Top 10 Loss Analysis
+            </h2>
+
+            <!-- Table container -->
+            <div style="flex-grow: 1; width: 100%; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: center;">
+                    <thead style="background-color: #e3f2fd; color: #1565c0;">
+                        <tr>
+                            <th style="padding: 6px; border: 1px solid #ccc;">#</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Line</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Station</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Equipment</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Type</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Cause</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Start Time</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">End Time</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Duration</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Operator</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Status</th>
+                            <th style="padding: 6px; border: 1px solid #ccc;">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">1</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Main-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-01</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Conveyor-1</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Electrical</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Power Loss</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">08:00</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">08:35</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">35 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-001</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Rebooted</td>
+                        </tr>
+                        <!-- Row 2 -->
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">2</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Sub-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-02</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Drill-2</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Mechanical</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Gear Jam</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">09:15</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">09:45</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">30 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-002</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">In Progress</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Waiting Parts</td>
+                        </tr>
+                        <!-- Row 3 -->
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">3</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Motor-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-03</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Hydraulic Arm</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Hydraulic</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Leakage</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">10:05</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">10:50</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">45 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-003</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Seal Replaced</td>
+                        </tr>
+                        <!-- Row 4 -->
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">4</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Main-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-04</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Compressor</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Pneumatic</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Pressure Drop</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">11:10</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">11:40</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">30 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-004</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Air Filter Cleaned</td>
+                        </tr>
+                        <!-- Row 5 -->
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">5</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Main-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-05</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Welding Unit</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Thermal</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Overheat</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">12:30</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">13:00</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">30 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-005</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Cooling Applied</td>
+                        </tr>
+                        <!-- Row 6 -->
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">6</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Sub-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-06</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Clamp</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Mechanical</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Clamp Failure</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">13:10</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">13:50</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">40 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-006</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Part Replaced</td>
+                        </tr>
+                        <!-- Row 7 -->
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">7</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Main-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-07</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Motor</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Electrical</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Short Circuit</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">14:00</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">14:25</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">25 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-007</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Wiring Fixed</td>
+                        </tr>
+                        <!-- Row 8 -->
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">8</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Motor-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-08</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Pump</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Hydraulic</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Seal Burst</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">15:00</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">15:40</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">40 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-008</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Seal Replaced</td>
+                        </tr>
+                        <!-- Row 9 -->
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">9</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Sub-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-09</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Arm Loader</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Mechanical</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Axis Jam</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">16:10</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">16:50</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">40 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-009</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Lubricated</td>
+                        </tr>
+                        <!-- Row 10 -->
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 5px; border: 1px solid #ccc;">10</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Main-Assy</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">ST-10</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Heater</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Thermal</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Overheat</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">17:00</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">17:30</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">30 mins</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">OP-010</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Resolved</td>
+                            <td style="padding: 5px; border: 1px solid #ccc;">Cooled Down</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+    
+
+</div>
+
+<div style="display: flex; gap: 12px; width: 100%; min-width: 1650px; margin: 0px auto; margin-left: -70px;">
+
+    <!-- First Group Box - Horizontal Bar Chart -->
+    <div style="width: 590px; height: 300px; margin-top:-80px; border: 1px solid #ccc; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Times New Roman', Times, serif; background: #fff; display: flex; flex-direction: column;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+                <!-- Title with icon -->
+                <h2 style="font-size: 24px; margin: 0; color: #333; display: flex; align-items: center; gap: 12px;">
+                    <svg width="32" height="32" viewBox="0 0 64 64" fill="none" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                        <rect x="8" y="32" width="8" height="24" fill="#FF6B6B" rx="2" ry="2" />
+                        <rect x="24" y="20" width="8" height="36" fill="#FFD93D" rx="2" ry="2" />
+                        <rect x="40" y="12" width="8" height="44" fill="#6BCB77" rx="2" ry="2" />
+                        <rect x="56" y="28" width="8" height="28" fill="#4D96FF" rx="2" ry="2" />
+                    </svg>
+                    Losses (%)
+                </h2>
+
+                <!-- Legends -->
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 4px;">
+                    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; background-color: #4D96FF; border-radius: 3px;"></span><span style="font-size: 14px;">Electrical</span></div>
+                    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; background-color: #FF6B6B; border-radius: 3px;"></span><span style="font-size: 14px;">Mechanical</span></div>
+                    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; background-color: #FFD93D; border-radius: 3px;"></span><span style="font-size: 14px;">Hydraulic</span></div>
+                    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; background-color: #6BCB77; border-radius: 3px;"></span><span style="font-size: 14px;">Pneumatic</span></div>
+                    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; background-color: #AB47BC; border-radius: 3px;"></span><span style="font-size: 14px;">Thermal</span></div>
+                    <div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; background-color: #00BFA6; border-radius: 3px;"></span><span style="font-size: 14px;">Software</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Canvas -->
+        <canvas id="lossChart" style="flex-grow: 1;"></canvas>
+    </div>
+
+
+    <!-- Second Group Box - Pie Chart -->
+    <div style="width: 380px; height: 300px; margin-top:-80px; border: 1px solid #ccc; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Times New Roman', Times, serif; background: #fff; display: flex; flex-direction: column;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 style="font-size: 24px; margin: 0; color: #333; display: flex; align-items: center; gap: 12px;">
+                <svg width="32" height="32" viewBox="0 0 64 64" fill="none" style="filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));">
+                    <rect x="8" y="32" width="8" height="24" fill="#FF6B6B" rx="2" ry="2" />
+                    <rect x="24" y="20" width="8" height="36" fill="#FFD93D" rx="2" ry="2" />
+                    <rect x="40" y="12" width="8" height="44" fill="#6BCB77" rx="2" ry="2" />
+                    <rect x="56" y="28" width="8" height="28" fill="#4D96FF" rx="2" ry="2" />
+                </svg>
+               Total Monthly Loss (%)
+            </h2>
+        </div>
+
+    </div>
+
+    <!-- Third Group Box - Placeholder -->
+    <div style="width: 645px; height: 210px;margin-top:10px; border: 1px solid #ccc; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: 'Times New Roman', Times, serif; background: #fff; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+        <h2 style="font-size: 24px; margin: 0 0 12px 0; color: #333; display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 28px; color: #1565c0;">📉</span>
+            Top 10 Breakdown
+        </h2>
+        <div style="flex-grow: 1; width: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+            <!-- You can add another chart or table here -->
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('breakdownChart').getContext('2d');
+
+    const stations = Array.from({ length: 10 }, (_, i) => `ST-${(i + 1).toString().padStart(2, '0')}`);
+
+    // Breakdown minutes data per station and type
+    const breakdownData = {
+      electrical:    [30, 20, 45, 25, 40, 35, 50, 20, 15, 30],
+      mechanical:    [20, 35, 25, 40, 30, 45, 20, 40, 35, 25],
+      hydraulic:     [15, 25, 30, 35, 20, 25, 30, 25, 20, 15],
+      pneumatic:     [10, 15, 20, 10, 15, 10, 15, 20, 10, 15],
+      thermal:       [5,  10,  5,  10,  5, 10,  5, 10,  5,  10]
+    };
+
+    const colors = {
+      electrical: '#4D96FF',
+      mechanical: '#FF6B6B',
+      hydraulic: '#FFD93D',
+      pneumatic: '#6BCB77',
+      thermal: '#AB47BC'
+    };
+
+    const datasets = Object.keys(breakdownData).map(key => ({
+      label: key.charAt(0).toUpperCase() + key.slice(1),
+      data: breakdownData[key],
+      backgroundColor: colors[key],
+      borderRadius: 4,
+      barPercentage: 0.7
+    }));
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: stations,
+        datasets: datasets
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Stations',
+              font: { size: 14, weight: 'bold' }
+            },
+            stacked: false,
+            ticks: {
+              maxRotation: 0,
+              minRotation: 0,
+              align: 'center',
+              autoSkip: false
+            }
+          },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Breakdown Time (minutes)',
+              font: { size: 14, weight: 'bold' }
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top',
+            labels: {
+              font: { size: 14 }
+            }
+          },
+          tooltip: {
+            enabled: true,
+            mode: 'index',
+            intersect: false
+          }
+        }
+      }
+    });
+</script>
+
+<!-- Chart.js Script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('lossChart').getContext('2d');
+    const lossChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Electrical', 'Mechanical', 'Hydraulic', 'Pneumatic', 'Thermal', 'Software'],
+            datasets: [{
+                label: 'Loss %',
+                data: [20, 15, 10, 12, 18, 8], // Example data
+                backgroundColor: [
+                    '#4D96FF',
+                    '#FF6B6B',
+                    '#FFD93D',
+                    '#6BCB77',
+                    '#AB47BC',
+                    '#00BFA6'
+                ],
+                borderRadius: 6,
+                barThickness: 18
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: { color: '#333', font: { family: 'Times New Roman', size: 12 } }
+                },
+                y: {
+                    ticks: { color: '#333', font: { family: 'Times New Roman', size: 12 } }
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.dataset.label + ': ' + context.raw + '%';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>

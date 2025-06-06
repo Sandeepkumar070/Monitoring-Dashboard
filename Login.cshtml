@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    ViewBag.HideSidebar = true;
+}
+
+<body style="margin:0;padding:0;overflow-x:hidden;height:100vh;font-family:'Segoe UI',sans-serif;">
+
+    <!-- Fullscreen Background Panel with Centered Form -->
+    <div style="
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:88vh;
+        margin-left:-310px;
+        width:2100px;
+        background: url('/Image/Can1.jpg') no-repeat center center;
+        background-size: cover;">
+
+        <div style="
+            width:80%;
+            max-width:450px;
+max-height:550px;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+            background-color:rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            animation:fadeIn 1s ease-in-out;">
+
+            <form onsubmit="return validateLogin()" style="width:100%;">
+                <h2 style="text-align:center;margin-bottom:20px;color:#fff;">Welcome Back</h2>
+
+                <!-- Username Field -->
+                <div style="position:relative;margin-bottom:25px;">
+                    <input type="text" id="username" required placeholder=" " style="
+                        width:100%;
+                        padding:10px 10px 10px 5px;
+                        font-size:16px;
+                        border:none;
+                        border-bottom:2px solid #ddd;
+                        background:transparent;
+                        outline:none;
+                        color:white;">
+                    <label for="username" style="
+                        position:absolute;
+                        top:10px;
+                        left:5px;
+                        font-size:16px;
+                        color:#ccc;
+                        pointer-events:none;
+                        transition:0.3s ease;">Username</label>
+                </div>
+
+                <!-- Password Field -->
+                <div style="position:relative;margin-bottom:25px;">
+                    <input type="password" id="password" required placeholder=" " style="
+                        width:100%;
+                        padding:10px 10px 10px 5px;
+                        font-size:16px;
+                        border:none;
+                        border-bottom:2px solid #ddd;
+                        background:transparent;
+                        outline:none;
+                        color:white;">
+                    <label for="password" style="
+                        position:absolute;
+                        top:10px;
+                        left:5px;
+                        font-size:16px;
+                        color:#ccc;
+                        pointer-events:none;
+                        transition:0.3s ease;">Password</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" style="
+                    width:100%;
+                    padding:12px;
+                    background:#4b6cb7;
+                    color:white;
+                    border:none;
+                    border-radius:30px;
+                    cursor:pointer;
+                    font-size:16px;
+                    transition:background 0.3s ease;">
+                    Login
+                </button>
+
+                <p style="text-align:center;margin-top:15px;font-size:14px;color:white;">
+                    Don't have an account? <a href="#" style="color:#ffd700;text-decoration:none;">Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Floating label animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    const label = input.nextElementSibling;
+                    label.style.top = '-15px';
+                    label.style.fontSize = '13px';
+                    label.style.color = '#ffd700';
+                });
+                input.addEventListener('blur', () => {
+                    if (!input.value) {
+                        const label = input.nextElementSibling;
+                        label.style.top = '10px';
+                        label.style.fontSize = '16px';
+                        label.style.color = '#ccc';
+                    }
+                });
+            });
+        });
+
+        function validateLogin() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (!username || !password) {
+                alert("Please enter both username and password.");
+                return false;
+            }
+
+            if (username === "admin" && password === "admin@123") {
+                window.location.href = "/Home/Index";
+                return false;
+            } else {
+                alert("Invalid username or password.");
+                return false;
+            }
+        }
+    </script>
+
+</body>
